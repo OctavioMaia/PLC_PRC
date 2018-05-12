@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1520870739253" name="http://miei.di.uminho.pt/prc2018/logica" uri="logica_ex1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520870739253" name="shadowed:http://miei.di.uminho.pt/prc2018/logica" uri="logica%23/logica%23.rdf"/>
+    </group>
+</catalog>

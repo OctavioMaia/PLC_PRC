@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ex="http://www.di.uminho.pt/jcr/XML/rdf/exercicio#">
+    <rdf:Description rdf:ID="ex:Publicacao">
+        <rdf:type rdf:resource="rdfs:Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Proceedings">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:InProceedings">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Article">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Misc">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:PhdThesis">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:MasterThesis">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Publicacao"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Pessoa">
+        <rdf:type rdf:resource="rdfs:Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Autor">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Pessoa"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="ex:Editor">
+        <rdf:type rdf:resource="rdfs:Class"/>
+        <rdfs:subClassOf rdf:resource="#ex:Pessoa"/>
+    </rdf:Description>
+    <!-- ..........Propriedades..........................-->
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:Property rdf:ID="nome">
+        <rdfs:domain rdf:resource="#ex:Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    <rdf:Property rdf:ID="ex:temAutor">
+        <rdfs:domain rdf:resource="#ex:Publicacao"/>
+        <rdfs:range rdf:resource="#ex:Pessoa"/>
+    </rdf:Property>
+    <rdf:Property rdf:ID="ex:temEditor">
+        <rdfs:domain rdf:resource="#ex:Publicacao"/>
+        <rdfs:range rdf:resource="#ex:Pessoa"/>
+    </rdf:Property>
+    <rdf:Property rdf:ID="ex:data">
+        <rdfs:domain rdf:resource="#ex:Publicacao"/>
+    </rdf:Property>
+    <rdf:Property rdf:ID="ex:titulo">
+        <rdfs:domain rdf:resource="#ex:Publicacao"/>
+    </rdf:Property>
+    <rdf:Property rdf:ID="ex:doi">
+        <rdfs:domain rdf:resource="#ex:Publicacao"/>
+    </rdf:Property>
+    <!-- ....Ocorrências...............................-->
+    <ex:Pessoa rdf:ID="ex:mferreira">
+        <ex:nome>Miguel Ferreira</ex:nome>
+    </ex:Pessoa>
+    <ex:Pessoa rdf:ID="ex:jcr">
+        <ex:nome>José Carlos Ramalho</ex:nome>
+    </ex:Pessoa>
+    <ex:Pessoa rdf:ID="ex:lfaria">
+        <ex:nome>Luís Faria</ex:nome>
+    </ex:Pessoa>
+    <ex:Inproceedings rdf:ID="ex:archiving2013">
+        <ex:titulo>Guidelines for legacy repository migration</ex:titulo>
+        <ex:temAutor rdf:resource="ex:mferreira"/>
+        <ex:temAutor rdf:resource="ex:jcr"/>
+        <ex:temAutor rdf:resource="ex:lfaria"/>
+        <ex:doi>http://hdl.handle.net/1822/23978</ex:doi>
+        <ex:data>2013-04-02</ex:data>
+    </ex:Inproceedings>
+</rdf:RDF>

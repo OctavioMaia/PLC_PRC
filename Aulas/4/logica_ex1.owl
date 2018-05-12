@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY logica "http://miei.di.uminho.pt/prc2018/logica#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://miei.di.uminho.pt/prc2018/logica#"
+     xml:base="http://miei.di.uminho.pt/prc2018/logica"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:logica="http://miei.di.uminho.pt/prc2018/logica#">
+    <owl:Ontology rdf:about="http://miei.di.uminho.pt/prc2018/logica#">
+        <rdfs:comment>História com lógica
+</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#ViajaPara -->
+
+    <owl:ObjectProperty rdf:about="&logica;ViajaPara">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#gostaDe -->
+
+    <owl:ObjectProperty rdf:about="&logica;gostaDe">
+        <owl:inverseOf rdf:resource="&logica;éApreciadoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#temMochila -->
+
+    <owl:ObjectProperty rdf:about="&logica;temMochila">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#àDireitaDe -->
+
+    <owl:ObjectProperty rdf:about="&logica;àDireitaDe">
+        <owl:inverseOf rdf:resource="&logica;àEsquerdaDe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#àEsquerdaDe -->
+
+    <owl:ObjectProperty rdf:about="&logica;àEsquerdaDe">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#éApreciadoPor -->
+
+    <owl:ObjectProperty rdf:about="&logica;éApreciadoPor"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#éMochilaDe -->
+
+    <owl:ObjectProperty rdf:about="&logica;éMochilaDe">
+        <owl:inverseOf rdf:resource="&logica;temMochila"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#éVisitadaPor -->
+
+    <owl:ObjectProperty rdf:about="&logica;éVisitadaPor">
+        <owl:inverseOf rdf:resource="&logica;ViajaPara"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#cor -->
+
+    <owl:DatatypeProperty rdf:about="&logica;cor"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#nome -->
+
+    <owl:DatatypeProperty rdf:about="&logica;nome"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#a1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;a1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+        <nome>Canário</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#a2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;a2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+        <nome>Cão</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#a3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;a3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+        <nome>Gato</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#a4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;a4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+        <nome>Cavalo</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#a5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;a5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Animal"/>
+        <nome>Hamster</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#c1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;c1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+        <nome>Londres</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#c2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;c2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+        <nome>Paris</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#c3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;c3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+        <nome>Bruxelas</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#c4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;c4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+        <nome>Roma</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#c5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;c5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Cidade"/>
+        <nome>Estocolmo</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#d1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;d1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+        <nome>História</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#d2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;d2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+        <nome>Matemática</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#d3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;d3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+        <nome>Português</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#d4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;d4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+        <nome>Biologia</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#d5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;d5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Disciplina"/>
+        <nome>Artes</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#f1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;f1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+        <nome>Morango</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#f2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;f2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+        <nome>Abacaxi</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#f3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;f3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+        <nome>Limão</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#f4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;f4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+        <nome>Laranja</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#f5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;f5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Fruto"/>
+        <nome>Maracujá</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#m1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;m1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <cor>Amarela</cor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#m2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;m2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <cor>Azul</cor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#m3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;m3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <cor>Vermelha</cor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#m4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;m4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <cor>Verde</cor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#m5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;m5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Mochila"/>
+        <cor>Preta</cor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#p1 -->
+
+    <owl:NamedIndividual rdf:about="&logica;p1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <nome>Pati</nome>
+        <gostaDe rdf:resource="&logica;a1"/>
+        <ViajaPara rdf:resource="&logica;c1"/>
+        <gostaDe rdf:resource="&logica;d1"/>
+        <gostaDe rdf:resource="&logica;f1"/>
+        <temMochila rdf:resource="&logica;m1"/>
+        <àEsquerdaDe rdf:resource="&logica;p2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#p2 -->
+
+    <owl:NamedIndividual rdf:about="&logica;p2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <nome>Joana</nome>
+        <gostaDe rdf:resource="&logica;a2"/>
+        <ViajaPara rdf:resource="&logica;c2"/>
+        <gostaDe rdf:resource="&logica;d2"/>
+        <gostaDe rdf:resource="&logica;f2"/>
+        <temMochila rdf:resource="&logica;m2"/>
+        <àEsquerdaDe rdf:resource="&logica;p3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#p3 -->
+
+    <owl:NamedIndividual rdf:about="&logica;p3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <nome>Ana</nome>
+        <gostaDe rdf:resource="&logica;a3"/>
+        <ViajaPara rdf:resource="&logica;c3"/>
+        <gostaDe rdf:resource="&logica;d3"/>
+        <gostaDe rdf:resource="&logica;f3"/>
+        <temMochila rdf:resource="&logica;m3"/>
+        <àEsquerdaDe rdf:resource="&logica;p4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#p4 -->
+
+    <owl:NamedIndividual rdf:about="&logica;p4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <nome>Jéssica</nome>
+        <gostaDe rdf:resource="&logica;a4"/>
+        <ViajaPara rdf:resource="&logica;c4"/>
+        <gostaDe rdf:resource="&logica;d4"/>
+        <gostaDe rdf:resource="&logica;f4"/>
+        <temMochila rdf:resource="&logica;m4"/>
+        <àEsquerdaDe rdf:resource="&logica;p5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/logica#p5 -->
+
+    <owl:NamedIndividual rdf:about="&logica;p5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/2/untitled-ontology-14#Pessoa"/>
+        <nome>Renata</nome>
+        <gostaDe rdf:resource="&logica;a5"/>
+        <ViajaPara rdf:resource="&logica;c5"/>
+        <gostaDe rdf:resource="&logica;d5"/>
+        <gostaDe rdf:resource="&logica;f5"/>
+        <temMochila rdf:resource="&logica;m5"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

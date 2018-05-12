@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?o ?u WHERE { 
+	?o a rdf:Docente.
+    ?u rdf:éLecionadoPor ?o.
+}
+
+
+
+PREFIX rdf: <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?o ?u WHERE { 
+	?o a rdf:UC.
+    ?u rdf:éTrabalhoDe ?o.
+}
+
+
+
+PREFIX rdf: <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?o ?u ?s WHERE { 
+	?o a rdf:Aluno.
+    ?u rdf:éFrequentadoPor ?o.
+    ?s rdf:éTrabalhoDe ?u.
+}
+
+
+
+PREFIX rdf: <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?o ?u WHERE { 
+	?o a rdf:Docente.
+    ?u rdf:supervisionadoPor ?o.
+}

@@ -1,0 +1,15 @@
+PREFIX fo: <http://purl.org/ontology/fo/>
+
+SELECT ?count (count(?s) AS ?count) WHERE {
+	?s a fo:Recipe.
+}
+
+
+PREFIX fo: <http://purl.org/ontology/fo/>
+
+SELECT ?s ?o WHERE {
+	?s a fo:Recipe.
+    ?o fo:ingredients ?s.
+}
+
+

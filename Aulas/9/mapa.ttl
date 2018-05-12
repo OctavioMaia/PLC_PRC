@@ -1,0 +1,273 @@
+@prefix : <http://prc2018.di.uminho.pt/mapa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base <http://prc2018.di.uminho.pt/mapa> .
+
+<http://prc2018.di.uminho.pt/mapa> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://prc2018.di.uminho.pt/mapa#pertenceDistrito
+:pertenceDistrito rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :temCidade ;
+                  rdfs:domain :Cidade ;
+                  rdfs:range :Distrito .
+
+
+###  http://prc2018.di.uminho.pt/mapa#temCidade
+:temCidade rdf:type owl:ObjectProperty ;
+           rdfs:domain :Cidade ;
+           rdfs:range :Distrito .
+
+
+###  http://prc2018.di.uminho.pt/mapa#temDestino
+:temDestino rdf:type owl:ObjectProperty ;
+            rdfs:domain :Ligação ;
+            rdfs:range :Cidade .
+
+
+###  http://prc2018.di.uminho.pt/mapa#temOrigem
+:temOrigem rdf:type owl:ObjectProperty ;
+           rdfs:domain :Ligação ;
+           rdfs:range :Cidade .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://prc2018.di.uminho.pt/mapa#descrição
+:descrição rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Cidade .
+
+
+###  http://prc2018.di.uminho.pt/mapa#distância
+:distância rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Ligação .
+
+
+###  http://prc2018.di.uminho.pt/mapa#nome
+:nome rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :Cidade .
+
+
+###  http://prc2018.di.uminho.pt/mapa#população
+:população rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Cidade .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://prc2018.di.uminho.pt/mapa#Cidade
+:Cidade rdf:type owl:Class .
+
+
+###  http://prc2018.di.uminho.pt/mapa#Distrito
+:Distrito rdf:type owl:Class .
+
+
+###  http://prc2018.di.uminho.pt/mapa#Ligação
+:Ligação rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://prc2018.di.uminho.pt/mapa#Dbrg
+:Dbrg rdf:type owl:NamedIndividual ,
+               :Distrito ;
+      :temCidade :bcl ,
+                 :brg ,
+                 :gmr ;
+      :nome "Distrito de Braga" .
+
+
+###  http://prc2018.di.uminho.pt/mapa#Dprt
+:Dprt rdf:type owl:NamedIndividual ,
+               :Distrito ;
+      :temCidade :fml ,
+                 :prt ;
+      :nome "Distrito do Porto" .
+
+
+###  http://prc2018.di.uminho.pt/mapa#Dvct
+:Dvct rdf:type owl:NamedIndividual ,
+               :Distrito ;
+      :temCidade :ptl ,
+                 :vct ;
+      :nome "Distrito de Viana do Castelo" .
+
+
+###  http://prc2018.di.uminho.pt/mapa#bcl
+:bcl rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Cidade do galo" ;
+     :nome "Barcelos" ;
+     :população 60000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#bcl-vct
+:bcl-vct rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :vct ;
+         :temOrigem :bcl ;
+         :distância 22 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#brg
+:brg rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Cidade dos arcebispos" ;
+     :nome "Braga" ;
+     :população 140000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#brg-bcl
+:brg-bcl rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :bcl ;
+         :temOrigem :brg ;
+         :distância 20 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#brg-fml
+:brg-fml rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :fml ;
+         :temOrigem :brg ;
+         :distância 17 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#brg-gmr
+:brg-gmr rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :gmr ;
+         :temOrigem :brg ;
+         :distância 18 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#fml
+:fml rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Princesa do Ave" ;
+     :nome "Vila Nova de Famalicão" ;
+     :população 90000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#fml-bcl
+:fml-bcl rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :bcl ;
+         :temOrigem :fml ;
+         :distância 25 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#fml-prt
+:fml-prt rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :prt ;
+         :temOrigem :fml ;
+         :distância 30 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#gmr
+:gmr rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Berço de Portugal" ;
+     :nome "Guimarães" ;
+     :população 80000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#gmr-fml
+:gmr-fml rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :fml ;
+         :temOrigem :gmr ;
+         :distância 22 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#gmr-prt
+:gmr-prt rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :prt ;
+         :temOrigem :gmr ;
+         :distância 38 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#prt
+:prt rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Cidade invicta" ;
+     :nome "Porto" ;
+     :população 1000000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#prt-gmr
+:prt-gmr rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :gmr ;
+         :temOrigem :prt ;
+         :distância 40 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#prt-vct
+:prt-vct rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :vct ;
+         :temOrigem :prt ;
+         :distância 70 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#ptl
+:ptl rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Vila mais antiga de Portugal" ;
+     :nome "Ponte do Lima" ;
+     :população 60000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#ptl-bcl
+:ptl-bcl rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :bcl ;
+         :temOrigem :ptl ;
+         :distância 19 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#ptl-brg
+:ptl-brg rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :brg ;
+         :temOrigem :ptl ;
+         :distância 31 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#vct
+:vct rdf:type owl:NamedIndividual ,
+              :Cidade ;
+     :descrição "Cidade dos pescadores" ;
+     :nome "Viana do Castelo" ;
+     :população 60000 .
+
+
+###  http://prc2018.di.uminho.pt/mapa#vct-prt
+:vct-prt rdf:type owl:NamedIndividual ,
+                  :Ligação ;
+         :temDestino :prt ;
+         :temOrigem :vct ;
+         :distância 61 .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

@@ -1,0 +1,15 @@
+2.1
+PREFIX db: <http://dbpedia.org/ontology/>
+SELECT  ?co ?nome
+WHERE {
+  ?co a db:Country .
+  ?co <http://dbpedia.org/ontology/country>/rdfs:label ?nome .
+}Limit 100
+
+2.3
+
+PREFIX db: <http://dbpedia.org/ontology/>
+SELECT ?city
+WHERE {
+  ?city a db:City .
+}Limit 100

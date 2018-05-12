@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://miei.di.uminho.pt/prc2018/universidade$#"
+     xml:base="http://miei.di.uminho.pt/prc2018/universidade$"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://miei.di.uminho.pt/prc2018/universidade$">
+        <rdfs:label xml:lang="pt">OntoUM</rdfs:label>
+        <rdfs:comment xml:lang="pt">Uma ontologia sobre o contexto universitario.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#colaboraCom -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#colaboraCom">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Funcionario"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Universidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#fazParteDoPlanoCurricular -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#fazParteDoPlanoCurricular">
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#UnidadeCurricular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#frequenta -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#frequenta">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Aluno"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#UnidadeCurricular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#leciona -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#leciona">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Docente"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#UnidadeCurricular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#temColaborador -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#temColaborador">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#colaboraCom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#temUnidadeCurricular -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#temUnidadeCurricular">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#fazParteDoPlanoCurricular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#éFrequentadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#éFrequentadoPor">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#frequenta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#éLecionadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#éLecionadaPor">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#leciona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Aluno -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Aluno">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Artigo -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Artigo">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Publicacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#ArtigoConferencia -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#ArtigoConferencia">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Artigo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#ArtigoRevista -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#ArtigoRevista">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Artigo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Competencia -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Competencia"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Curso -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Curso1Ciclo -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Curso1Ciclo">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Curso2Ciclo -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Curso2Ciclo">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Curso3Ciclo -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Curso3Ciclo">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Curso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Departamento -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Departamento">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Escola"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Docente -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Docente">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Funcionario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Escola -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Escola">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Universidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Funcionario -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Funcionario">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Livro -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Livro">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Publicacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#NaoDocente -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#NaoDocente">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Funcionario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Pessoa -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Publicacao -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Publicacao"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Tese -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Tese">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Publicacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#UnidadeCurricular -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#UnidadeCurricular"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#Universidade -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#Universidade"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#bruno -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#bruno">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#claudia -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#claudia">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#jcr -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#jcr">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#joana -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#joana">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#samuel -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#samuel">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Pessoa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/universidade$#uminho -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/universidade$#uminho">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/universidade$#Universidade"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

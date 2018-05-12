@@ -1,0 +1,47 @@
+1. Obter a lista de distritos
+
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+
+select ?uri ?nome where{
+    ?uri a mapa:Distrito ;
+         mapa:nome ?nome .
+}
+
+2. Informacao de distrito (Dbrg):
+    - uri
+    - nome
+    - cidades
+
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+
+select * where{
+    mapa:Dbrg mapa:nome ?nome .
+    mapa:Dbrg mapa:temCidade ?c .
+    ?c mapa:nome ?nomeC .
+}
+
+
+3. Informacao da cidade (brg):
+    -nome
+    -descricao
+    -populacao
+
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+
+select * where{
+    mapa:brg mapa:nome ?nomeC;
+       mapa:descrição ?desc;
+       mapa:população ?pop .
+}
+
+4. Ligacoes da cidade braga
+
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+
+select * where{
+    mapa:brg mapa:nome ?nomeC;
+       mapa:descrição ?desc;
+       mapa:população ?pop .
+    ?liga mapa:temOrigem mapa:brg .
+    ?liga mapa:temDestino ?destino .
+}

@@ -1,0 +1,269 @@
+@prefix : <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26> .
+
+<http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :éFrequentadoPor ;
+           rdfs:domain :Aluno ;
+           rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#leciona
+:leciona rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éLecionadoPor ;
+         rdfs:domain :Docente ;
+         rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#supervisionadoPor
+:supervisionadoPor rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :éSupervisor .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#temComoAvaliação
+:temComoAvaliação rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :éTrabalhoDe ;
+                  rdfs:domain :Trabalho ;
+                  rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#temUC
+:temUC rdf:type owl:ObjectProperty ;
+       owl:inverseOf :éUcDe ;
+       rdfs:domain :UC ;
+       rdfs:range :Curso .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#éFrequentadoPor
+:éFrequentadoPor rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Aluno ;
+                 rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#éLecionadoPor
+:éLecionadoPor rdf:type owl:ObjectProperty ;
+               rdfs:domain :UC ;
+               rdfs:range :Docente .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#éSupervisor
+:éSupervisor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Docente ;
+             rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#éTrabalhoDe
+:éTrabalhoDe rdf:type owl:ObjectProperty ;
+             rdfs:domain :Trabalho ;
+             rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#éUcDe
+:éUcDe rdf:type owl:ObjectProperty ;
+       rdfs:domain :UC ;
+       rdfs:range :Curso .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Curso
+:Curso rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Docente
+:Docente rdf:type owl:Class ;
+         rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Pessoa
+:Pessoa rdf:type owl:Class ;
+        rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Trabalho
+:Trabalho rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#UC
+:UC rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#AWK
+:AWK rdf:type owl:NamedIndividual ,
+              :Trabalho ;
+     :éTrabalhoDe :ProcLinguagens .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Bernardo
+:Bernardo rdf:type owl:NamedIndividual ,
+                   :Aluno ;
+          :frequenta :Projeto ;
+          :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#COMPILADOR
+:COMPILADOR rdf:type owl:NamedIndividual ,
+                     :Trabalho ;
+            :éTrabalhoDe :ProcLinguagens .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#FLEX
+:FLEX rdf:type owl:NamedIndividual ,
+               :Trabalho ;
+      :éTrabalhoDe :ProcLinguagens .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#IntProgNãoInformaticos
+:IntProgNãoInformaticos rdf:type owl:NamedIndividual ,
+                                 :UC ;
+                        :temComoAvaliação :JogoSimples ,
+                                          :RPG ;
+                        :éFrequentadoPor :José_Pedro ,
+                                         :Rita .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#JogoSimples
+:JogoSimples rdf:type owl:NamedIndividual ,
+                      :Trabalho ;
+             :éTrabalhoDe :IntProgNãoInformaticos .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#José_Pedro
+:José_Pedro rdf:type owl:NamedIndividual ,
+                     :Aluno ;
+            :frequenta :IntProgNãoInformaticos ;
+            :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#LCC
+:LCC rdf:type owl:NamedIndividual ,
+              :Curso .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#LabEI
+:LabEI rdf:type owl:NamedIndividual ,
+                :UC ;
+       :éUcDe :MIEI .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#MIEI
+:MIEI rdf:type owl:NamedIndividual ,
+               :Curso ;
+      :temUC :ProcConhecimento ,
+             :ProcLinguagens .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Mafalda
+:Mafalda rdf:type owl:NamedIndividual ,
+                  :Aluno ;
+         :frequenta :ProcLinguagens ;
+         :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Marcelo
+:Marcelo rdf:type owl:NamedIndividual ,
+                  :Aluno ;
+         :frequenta :Projeto ;
+         :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Miguel
+:Miguel rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :frequenta :ProcLinguagens ;
+        :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Pedro
+:Pedro rdf:type owl:NamedIndividual ,
+                :Aluno ;
+       :frequenta :ProcLinguagens ;
+       :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#ProcConhecimento
+:ProcConhecimento rdf:type owl:NamedIndividual ,
+                           :UC ;
+                  :éUcDe :MIEI .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#ProcLinguagens
+:ProcLinguagens rdf:type owl:NamedIndividual ,
+                         :UC ;
+                :temComoAvaliação :AWK ,
+                                  :COMPILADOR ,
+                                  :FLEX ;
+                :éFrequentadoPor :Mafalda ,
+                                 :Miguel ,
+                                 :Pedro ;
+                :éUcDe :MIEI .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Projeto
+:Projeto rdf:type owl:NamedIndividual ,
+                  :UC ;
+         :éFrequentadoPor :Bernardo ,
+                          :Marcelo ,
+                          :Simão ;
+         :éUcDe :LCC .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#RPG
+:RPG rdf:type owl:NamedIndividual ,
+              :Trabalho ;
+     :éTrabalhoDe :IntProgNãoInformaticos .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Ramalho
+:Ramalho rdf:type owl:NamedIndividual ,
+                  :Docente ;
+         :leciona :IntProgNãoInformaticos ,
+                  :ProcConhecimento ,
+                  :ProcLinguagens ;
+         :éSupervisor :Bernardo ,
+                      :José_Pedro ,
+                      :Mafalda ,
+                      :Marcelo ,
+                      :Miguel ,
+                      :Pedro ,
+                      :Rita ,
+                      :Simão .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Rita
+:Rita rdf:type owl:NamedIndividual ,
+               :Aluno ;
+      :frequenta :IntProgNãoInformaticos ;
+      :supervisionadoPor :Ramalho .
+
+
+###  http://www.semanticweb.org/octavio/ontologies/2018/3/untitled-ontology-26#Simão
+:Simão rdf:type owl:NamedIndividual ,
+                :Aluno ;
+       :frequenta :Projeto ;
+       :supervisionadoPor :Ramalho .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
