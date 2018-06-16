@@ -1,0 +1,1357 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#"
+     xml:base="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc"
+     xmlns:oacc="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:desc="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#desc:">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc">
+        <desc:title xml:lang="en">Ontology of a Cryptocurrency</desc:title>
+        <desc:about xml:lang="en">Ontology of a Cryptocurrency (OACC) is a voculary designed to better describe a cryptocurrency model as well as it&apos;s implementation.</desc:about>
+        <desc:author>Octávio Maia</desc:author>
+        <desc:copyright xml:lang="en">Copyright © 2018 Octávio Maia</desc:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#desc:about -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#desc:about"/>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#desc:title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#desc:title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#forkedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#forkedFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasCreator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasICO -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasICO">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasNone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasNone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasPremine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#hasPremine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#isPOS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#isPOS">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#isPOW -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#isPOW">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#usingAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#usingAlgorithm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <desc:about xml:lang="en">Algorithm used to submit shares/results for a particular coin.</desc:about>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#about -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#about">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#blockreward -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#blockreward">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#blocktime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#blocktime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#circulatingsupply -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#circulatingsupply">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#founded -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#founded">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#icoammount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#icoammount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#maxsupply -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#maxsupply">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#networkdif -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#networkdif">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#networkhashrate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#networkhashrate">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#premineammount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#premineammount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#projectwhitepaper -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#projectwhitepaper">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#symbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#symbol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tag">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#website -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#website">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency">
+        <desc:about xml:lang="en">A cryptocurrency.</desc:about>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme">
+        <desc:about xml:lang="en">How the initial distribution of coins should be conducted between miners and non-miners.</desc:about>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <desc:about xml:lang="en">When a coin forks from another coin, all existing balances on the previous coin wallet are replicated on the new coin wallet on a ration set by the developer.</desc:about>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm">
+        <desc:about xml:lang="en">Cryptographic function for producing hashes/results.</desc:about>
+        <desc:title xml:lang="en">Cryptographic hashing function</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <desc:about xml:lang="en">An ICO (Initial Coin Offering) is used by startups to bypass the rigorous and regulated capital-raising process required by venture capitalists or banks.
+The main purpose is to get sufficient hard-currency in exchange for an ammount of Cryptocurrency.</desc:about>
+        <desc:title xml:lang="en">Initial Coin Offering</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <desc:about xml:lang="en">Used when no premine or no ICO was offered.
+Fair launch for all peers.</desc:about>
+        <desc:title xml:lang="en">Fair launch, no ICO or pre-mine</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <desc:about xml:lang="en">A method of securing a cryptocurrency peer-to-peer network through requesting users to show ownership of a certain amount of currency.</desc:about>
+        <desc:title xml:lang="en">Proof of Stake</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <desc:about xml:lang="en">A method of securing a cryptocurrency peer-to-peer network through requesting proof from users that work has been done.</desc:about>
+        <desc:title xml:lang="en">Proof of Work</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <desc:about xml:lang="en">A premine is when a developer allocates a certain amount of currency credit to a particular address before releasing the source code to the open community. This is often done based on the reasoning that they need to get hard-currency for exchange listing, etc.</desc:about>
+        <desc:title xml:lang="en">Pre-mine</desc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme">
+        <desc:about xml:lang="en">How the public ledger/record should be mantained.</desc:about>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <forkedFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon_creator"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnlite"/>
+        <about xml:lang="en">AEON isn&apos;t just a currency.
+It&apos;s a lifestyle.
+Decentralized digital currency is slowly becoming a normal part of everyday life. Yet everybody&apos;s main internet device continues to be their cellphone, a device with a low-powered CPU and limited available storage.
+
+AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own.</about>
+        <blockreward xml:lang="en">9.58 AEON</blockreward>
+        <blocktime xml:lang="en">3m 19s</blocktime>
+        <circulatingsupply xml:lang="en">15 831 459 AEON</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <maxsupply xml:lang="en">18 400 000 AEON</maxsupply>
+        <name xml:lang="en">Aeon</name>
+        <networkdif xml:lang="en">2,787,268,139</networkdif>
+        <networkhashrate xml:lang="en">14.01 Mh/s</networkhashrate>
+        <price xml:lang="en">$1,41</price>
+        <symbol xml:lang="en">https://www.aeon.cash/img/aeon.png</symbol>
+        <tag xml:lang="en">AEON</tag>
+        <website xml:lang="en">http://www.aeon.cash/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#aeon_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Aeon</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_X11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_X11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">X11 is a widely used hashing algorithm created by Dash core developer Evan Duffield. X11’s chained hashing algorithm utilizes a sequence of eleven scientific hashing algorithms for the proof-of-work. This is so that the processing distribution is fair and coins will be distributed in much the same way Bitcoin’s were originally. X11 was intended to make ASICs much more difficult to create, thus giving the currency plenty of time to develop before mining centralization became a threat.</about>
+        <name xml:lang="en">X11</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_blake14r -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_blake14r">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <name xml:lang="en">BLAKE and BLAKE2 are cryptographic hash functions based on Dan Bernstein&apos;s ChaCha stream cipher, but a permuted copy of the input block, XORed with some round constants, is added before each ChaCha round. Like SHA-2, there are two variants differing in the word size. ChaCha operates on a 4×4 array of words. BLAKE repeatedly combines an 8-word hash value with 16 message words, truncating the ChaCha result to obtain the next hash value.</name>
+        <name xml:lang="en">Blake (14r)</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">CryptoNight is a proof-of-work algorithm. It is designed to be suitable for ordinary PC CPUs, but currently no special purpose devices for mining are available. Therefore, CryptoNight can only be CPU-mined for the time being. CryptoNight was originally implemented in the CryptoNote codebase.</about>
+        <name xml:lang="en">Cryptonight</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnheavy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnheavy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">CryptoNight is a proof-of-work algorithm. It is designed to be suitable for ordinary PC CPUs, but currently no special purpose devices for mining are available. Therefore, CryptoNight can only be CPU-mined for the time being. CryptoNight was originally implemented in the CryptoNote codebase.</about>
+        <name xml:lang="en">CryptonightHeavy</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnlite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnlite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">CryptoNight is a proof-of-work algorithm. It is designed to be suitable for ordinary PC CPUs, but currently no special purpose devices for mining are available. Therefore, CryptoNight can only be CPU-mined for the time being. CryptoNight was originally implemented in the CryptoNote codebase.</about>
+        <name xml:lang="en">CryptonightLite</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_equihash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_equihash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">Equihash is a memory-oriented Proof-of-Work algorithm developed by the University of Luxembourg&apos;s Interdisciplinary Centre for Security, Reliability and Trust (SnT).
+Alex Biryukov and Dmitry Khovratovich are part of the University of Luxembourg research group CryptoLUX, which developed Equihash. Equihash was introduced at the Network and Distributed System Security Symposium 2016 in San Diego. The cryptocurrency ZCash integrated Equihash in April 2016, for reasons such as security, privacy, and ASIC miner resistance. Bitcoin Magazine notes, &quot;According to the CryptoLUX scientists, the algorithm permits avoiding centralization of the mining process in the hands of a few first-class miners with specialized mining hardware, thus contributing to the “democratization” of digital currencies based on Equihash.&quot;</about>
+        <name xml:lang="en">Equihash</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_ethash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_ethash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">It is the latest version of Dagger-Hashimoto, although it can no longer appropriately be called that since many of the original features of both algorithms have been drastically changed in the last month of research and development.</about>
+        <name xml:lang="en">Ethash</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_scrypt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_scrypt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">Scrypt is a hash function that was first used by the cryptocurrency, Litecoin, as an alternative to the more well-known SHA-256 hash function. Scrypt and SHA-256 are used as mining algorithms within the Litecoin and Bitcoin protocols respectively. Both operate within the proof-of-work consensus mechanism, where a miner is required to solve a hash function in order to add a block the blockchain.</about>
+        <name xml:lang="en">Scrypt</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_sha256 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_sha256">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">SHA-256 is a member of the SHA-2 cryptographic hash functions designed by the NSA. SHA stands for Secure Hash Algorithm. Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed &quot;hash&quot; (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data&apos;s integrity. A one-way hash can be generated from any piece of data, but the data cannot be generated from the hash.
+
+SHA-256 is used in several different parts of the Bitcoin network:
+
+1) Mining uses SHA-256 as the Proof of work algorithm.
+2) SHA-256 is used in the creation of bitcoin addresses to improve security and privacy.</about>
+        <name>SHA-256</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_tensority -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_tensority">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">Tensority is a new PoW consensus algorithm,where matrix and tensor operations are introduced into the hashing process.We adopt random analyse method to prove security and fairness.Finally, we operate experiment and apply x2 test to show that Tensority have good random property</about>
+        <name xml:lang="en">Tensority</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_x16r -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_x16r">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#HashingAlgorithm"/>
+        <about xml:lang="en">The X16R hashing algorithm consists of 16 hashing algorithms operating in chain
+fashion with the ordering dependent on the last 8 bytes (16 nibbles) of the hash of the previous block.</about>
+        <name xml:lang="en">X16R</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_sha256"/>
+        <blockreward xml:lang="en">12.5 BTC</blockreward>
+        <blocktime xml:lang="en">10 minutes</blocktime>
+        <circulatingsupply xml:lang="en">17 093 025 BTC</circulatingsupply>
+        <founded xml:lang="en">2008</founded>
+        <maxsupply xml:lang="en">21 000 000 BTC</maxsupply>
+        <name xml:lang="en">Bitcoin</name>
+        <networkdif xml:lang="en">4,940,704,885,521</networkdif>
+        <networkhashrate xml:lang="en">35,713,090,887 GH/s</networkhashrate>
+        <price xml:lang="en">6400$ or 1 000 000 Satoshi</price>
+        <projectwhitepaper xml:lang="en">https://bitcoin.org/bitcoin.pdf</projectwhitepaper>
+        <symbol xml:lang="en">http://vu.hn/images/bitcoin-symbol-and-logo-origin-steps/completed%20bitcoin%20logo.png</symbol>
+        <tag xml:lang="en">BTC</tag>
+        <website xml:lang="en">https://www.bitcoin.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Satoshi Nakamoto is the name used by the unknown person or persons who developed bitcoin, authored the bitcoin white paper, created and deployed bitcoin&apos;s original reference implementation.
+As part of the implementation, they also devised the first blockchain database.
+In the process they were the first to solve the double-spending problem for digital currency using a peer-to-peer network. They were active in the development of bitcoin up until December 2010.</about>
+        <name>Satoshi Nakamoto</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <forkedFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoin"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash_creator"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_sha256"/>
+        <about xml:lang="en">Bitcoin Cash is peer-to-peer electronic cash for the Internet. It is fully decentralized, with no central bank and requires no trusted third parties to operate.</about>
+        <blockreward xml:lang="en">12.50 BCH</blockreward>
+        <blocktime xml:lang="en">11min 11s</blocktime>
+        <circulatingsupply xml:lang="en">17 183 075 BCH</circulatingsupply>
+        <founded xml:lang="en">2017</founded>
+        <maxsupply xml:lang="en">21 000 000 BCH</maxsupply>
+        <name xml:lang="en">Bitcoin Cash</name>
+        <networkdif xml:lang="en">641,522,907,793</networkdif>
+        <networkhashrate xml:lang="en">4,106.29 Ph/s</networkhashrate>
+        <price xml:lang="en">$848,74</price>
+        <projectwhitepaper xml:lang="en">https://www.bitcoincash.org/bitcoin.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bitcoin_Cash.png/1200px-Bitcoin_Cash.png</symbol>
+        <tag xml:lang="en">BCH</tag>
+        <website xml:lang="en">https://www.bitcoincash.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bitcoincash_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">HostFat</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cn"/>
+        <about xml:lang="en">Bytecoin is a private, decentralized cryptocurrency with open source code that allows everyone to take part in the Bytecoin network development. Privacy and security come naturally from using Bytecoin. The best solution for those who want to keep their financial privacy.
+
+Instant private transactions are provided all around the world by the Bytecoin Network, they are totally untraceable, and they don’t require any additional fees.
+
+Fiat currencies are assigned to specific territories while Bytecoin is bound to the Internet and therefore is international by default.</about>
+        <blockreward xml:lang="en">2022 BCN</blockreward>
+        <blocktime xml:lang="en">2m</blocktime>
+        <circulatingsupply xml:lang="en">183 890 481 254 BCN</circulatingsupply>
+        <founded xml:lang="en">2012</founded>
+        <maxsupply xml:lang="en">184 470 000 000 BCN</maxsupply>
+        <name xml:lang="en">Bytecoin</name>
+        <networkdif xml:lang="en">41,866,657,608</networkdif>
+        <networkhashrate xml:lang="en">348.89 Mh/s</networkhashrate>
+        <price xml:lang="en">$0,004612</price>
+        <projectwhitepaper xml:lang="en">https://bytecoin.org/resources/whitepaper.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://s2.coinmarketcap.com/static/img/coins/200x200/372.png</symbol>
+        <tag xml:lang="en">BCN</tag>
+        <website xml:lang="en">https://bytecoin.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytecoin_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">PACIFIC_SKYLINE, AMJUAREZ and others</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom_creator"/>
+        <hasICO rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_tensority"/>
+        <about xml:lang="en">Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.</about>
+        <blockreward xml:lang="en">412.5</blockreward>
+        <blocktime xml:lang="en">2m 25s</blocktime>
+        <circulatingsupply xml:lang="en">1 002 499 275 BTM</circulatingsupply>
+        <founded xml:lang="en">2017</founded>
+        <icoammount xml:lang="en">630 000 000 BTM</icoammount>
+        <maxsupply xml:lang="en">2 100 000 000 BTM</maxsupply>
+        <name xml:lang="en">Bytom</name>
+        <networkdif xml:lang="en">5,549,001,664</networkdif>
+        <networkhashrate xml:lang="en">38.27 Mh/s</networkhashrate>
+        <price xml:lang="en">$0,531508</price>
+        <projectwhitepaper xml:lang="en">https://bytom.io/wp-content/themes/freddo/book/BytomWhitePaperV1.0_En.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://seeklogo.com/images/B/bytom-logo-AA020AA87F-seeklogo.com.png</symbol>
+        <tag xml:lang="en">BTM</tag>
+        <website xml:lang="en">https://bytom.io/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#bytom_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Former Vice President of OKCoin which is the largest bitcoin exchange over the world. Successfully lead R&amp;D and operation teams of several blockchain products like OKCoin, OKLink, Bytom etc.</about>
+        <name xml:lang="en">Duan Xinxing</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo_creator"/>
+        <hasPremine rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_scrypt"/>
+        <about xml:lang="en">CryptoEscudo is a project planned and launched by Portuguese citizens, in which everyone is invited to participate.
+The idea is developed from the recent and innovative technological concept of cryptocurrency. A concept that changes everything we know about money: the way we use it, save it, or create it. A concept in which coins are created and used digitally in a decentralized and secure network, based on encryption. We&apos;re talking of the blockchain technology.
+
+The Portuguese cryptocurrency is not created or controlled by any banks, governments or companies. It is an encryption-based currency that takes its security from the complex calculations involved in it, being transparent and public to all, with its own blockchain. It is the digital reaching to money, as it has reached writing... music... communications.
+
+The name of our old currency &quot;escudo&quot; is not intended to represent the desire of returning to the past. It represents a reminder of our path to show us and guide us on a new and better future.
+
+Our idea is not political. Our idea is simply a technical solution emerged from the world of the cryptoeconomy. Because we believe that technology can also serve the common good and persistent problems of our country, this is our proposal:</about>
+        <blockreward xml:lang="en">200 CESC</blockreward>
+        <blocktime xml:lang="en">2m</blocktime>
+        <circulatingsupply xml:lang="en">144 105 100 CESC</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <maxsupply xml:lang="en">594 105 100 CESC</maxsupply>
+        <name xml:lang="en">CryptoEscudo</name>
+        <premineammount xml:lang="en">450 000 000</premineammount>
+        <price xml:lang="en">$0,001108</price>
+        <symbol xml:lang="en">https://cryptoescudo.pt/images/logo.png</symbol>
+        <tag xml:lang="en">CESC</tag>
+        <website xml:lang="en">https://cryptoescudo.pt/index-en.htm</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#cryptoescudo_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Unknown.</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_X11"/>
+        <about xml:lang="en">Dash (formerly known as Darkcoin and XCoin) is an open source peer-to-peer cryptocurrency and decentralized autonomous organization (DAO).
+It features instant transactions, private transactions and a self-funded, self-governed organizational structure sometimes referred to as the treasury system or decentralized governance by blockchain.
+These features rely on a global network of masternodes which vote on proposals for improving Dash&apos;s ecosystem.</about>
+        <blockreward xml:lang="en">1.67</blockreward>
+        <blocktime xml:lang="en">2m 37s</blocktime>
+        <circulatingsupply xml:lang="en">8 133 184 DASH</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <maxsupply xml:lang="en">18 900 000 DASH</maxsupply>
+        <name xml:lang="en">Dash</name>
+        <networkdif xml:lang="en">51,129,030</networkdif>
+        <networkhashrate xml:lang="en">1.40 Ph/s</networkhashrate>
+        <price xml:lang="en">$266,62</price>
+        <projectwhitepaper xml:lang="en">https://github.com/dashpay/dash/wiki/Whitepaper</projectwhitepaper>
+        <symbol xml:lang="en">https://altcoin.com.br/wp-content/uploads/2016/06/Dashlogo.png</symbol>
+        <tag xml:lang="en">DASH</tag>
+        <website xml:lang="en">https://www.dash.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dash_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Evan Duffield</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred_creator"/>
+        <hasPremine rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_blake14r"/>
+        <about xml:lang="en">Decred is an autonomous digital currency. With a hybrid consensus system, it is built to be a decentralized, sustainable, and self-ruling currency where stakeholders make the rules. It has support for Windows, macOS, and Linux. Easy-to-use wallet apps enable sending, receiving, and mining Decred with just a few clicks.
+
+Decred uses a hybridized consensus system to strike a balance between miners* and users to create a more robust currency. Typically, the miners who operate the infrastructure wield considerable influence while the users have relatively little sway. Decred allows users to participate in the project directly without the need for expensive mining hardware.</about>
+        <blockreward xml:lang="en">12.57 DCR</blockreward>
+        <blocktime xml:lang="en">5m 12s</blocktime>
+        <circulatingsupply xml:lang="en">7 145 743 DCR</circulatingsupply>
+        <founded xml:lang="en">2016</founded>
+        <maxsupply xml:lang="en">21 000 000 DCR</maxsupply>
+        <name xml:lang="en">Decred</name>
+        <networkdif xml:lang="en">1,971,538,813</networkdif>
+        <networkhashrate xml:lang="en">27.14 Ph/s</networkhashrate>
+        <premineammount xml:lang="en">1 680 000 DCR</premineammount>
+        <price xml:lang="en">$98,42</price>
+        <projectwhitepaper xml:lang="en">https://decred.org/research/buterin2014.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://crypto-fox.ru/wp-content/uploads/2017/10/decred-dcr-logo.png</symbol>
+        <tag xml:lang="en">DCR</tag>
+        <website xml:lang="en">https://decred.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#decred_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Unknown/Decentralized administration.</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_scrypt"/>
+        <about xml:lang="en">Dogecoin is a fun, new and rapidly growing form of digital currency.
+This form of digital currency is called &quot;cryptocurrency&quot;; a type of digital currency.
+Cryptocurrency is completely anonymous, decentralized, and extremely secure.
+
+Dogecoin is used with a wallet on your computer, your smartphone, or a website.
+You can use it to buy goods and services, or trade it for other currencies (both other cryptocurrencies or traditional currency like US dollars).</about>
+        <blockreward xml:lang="en">10 000 DOGE</blockreward>
+        <blocktime xml:lang="en">1m 2s</blocktime>
+        <circulatingsupply xml:lang="en">114 865 886 044 DOGE</circulatingsupply>
+        <founded xml:lang="en">2013</founded>
+        <maxsupply xml:lang="en">TBD</maxsupply>
+        <name xml:lang="en">Dogecoin</name>
+        <networkdif xml:lang="en">4,220,255</networkdif>
+        <networkhashrate xml:lang="en">292.35 Th/s</networkhashrate>
+        <price xml:lang="en">$0,002955</price>
+        <symbol xml:lang="en">https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png</symbol>
+        <tag xml:lang="en">DOGE</tag>
+        <website xml:lang="en">https://dogecoin.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#dogecoin_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Billy Markus, Jackson Palmer</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum_creator"/>
+        <hasICO rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cn"/>
+        <about xml:lang="en">Electroneum (ETN) is a a mobile cryptocurrency, that allows mining and offers a wallet for smart phones, designed for simplicity. The Electroneum ICO start date was in September 14, 2017.</about>
+        <blockreward xml:lang="en">11 866 ETN</blockreward>
+        <blocktime xml:lang="en">1m 55s</blocktime>
+        <circulatingsupply xml:lang="en">7 179 259 493 ETN</circulatingsupply>
+        <founded xml:lang="en">2017</founded>
+        <icoammount xml:lang="en">6 300 000 000 ETN</icoammount>
+        <maxsupply xml:lang="en">21 000 000 000 ETN</maxsupply>
+        <name xml:lang="en">Electroneum</name>
+        <networkdif xml:lang="en">11,377,040,785</networkdif>
+        <networkhashrate xml:lang="en">98.93 Mh/s</networkhashrate>
+        <price xml:lang="en">$0,014424</price>
+        <projectwhitepaper xml:lang="en">https://electroneum.com/overview-white-paper.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://s2.coinmarketcap.com/static/img/coins/200x200/2137.png</symbol>
+        <tag xml:lang="en">ETN</tag>
+        <website xml:lang="en">http://electroneum.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#electroneum_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Richard has a history of building successful digital businesses. He co-founded the successful digital agency SiteWizard, now over 20 years old. More recently, he founded Retortal.com in 2013. As the CEO, Richard’s assembled a team of over 40 developers and created a social media management platform, used by global fortune 500 companies such as Herbalife, Mary Kay &amp; Forever Living. Retortal’s software is used by hundreds of thousands of people around the world.</about>
+        <name xml:lang="en">Richard Ells</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos_creator"/>
+        <hasICO rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos"/>
+        <isPOS rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos"/>
+        <about xml:lang="en">OS.IO is software that introduces a blockchain architecture designed to enable vertical and horizontal scaling of decentralized applications (the “EOS.IO Software”). This is achieved through an operating system-like construct upon which applications can be built. The software provides accounts, authentication, databases, asynchronous communication and the scheduling of applications across multiple CPU cores and/or clusters. The resulting technology is a blockchain architecture that has the potential to scale to millions of transactions per second, eliminates user fees and allows for quick and easy deployment of decentralized applications.</about>
+        <circulatingsupply xml:lang="en">896 149 492 EOS</circulatingsupply>
+        <founded xml:lang="en">2017</founded>
+        <icoammount xml:lang="en">900 000 000 EOS</icoammount>
+        <maxsupply xml:lang="en">1 000 000 000 EOS</maxsupply>
+        <name xml:lang="en">EOS</name>
+        <price xml:lang="en">$10,31</price>
+        <projectwhitepaper xml:lang="en">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md</projectwhitepaper>
+        <symbol xml:lang="en">https://cdn.freebiesupply.com/logos/large/2x/eos-3-logo-png-transparent.png</symbol>
+        <tag xml:lang="en">EOS</tag>
+        <website xml:lang="en">https://eos.io/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eos_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Brendan Blumer</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth_creator"/>
+        <hasICO rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_ethash"/>
+        <about xml:lang="en">Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference.
+
+These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.</about>
+        <blockreward xml:lang="en">6 ETH</blockreward>
+        <blocktime xml:lang="en">15 seconds</blocktime>
+        <circulatingsupply xml:lang="en">100 071 683 ETH</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <icoammount xml:lang="en">50 000 000 ETH</icoammount>
+        <maxsupply xml:lang="en">TBD</maxsupply>
+        <name xml:lang="en">Ethereum</name>
+        <networkdif xml:lang="en">3,273,549,352,522,470</networkdif>
+        <networkhashrate xml:lang="en">280223 GH/s</networkhashrate>
+        <price xml:lang="en">470$</price>
+        <projectwhitepaper xml:lang="en">https://github.com/ethereum/wiki/wiki/White-Paper</projectwhitepaper>
+        <symbol xml:lang="en">https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/2000px-Ethereum_logo_2014.svg.png</symbol>
+        <tag xml:lang="en">ETH</tag>
+        <website xml:lang="en">https://www.ethereum.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Vitalik Buterin (Russian: Виталий Дмитриевич Бутерин; born January 31, 1994) is a Russian-Canadian programmer and writer primarily known as a co-founder of Ethereum and as a co-founder of Bitcoin Magazine.</about>
+        <name xml:lang="en">Vitalik Buterin</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ethclassic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ethclassic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <forkedFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth_creator"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ethclassic"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_ethash"/>
+        <about xml:lang="en">Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract (scripting) functionality.
+It provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes.</about>
+        <blockreward xml:lang="en">3.88 ETC</blockreward>
+        <blocktime xml:lang="en">14.23s</blocktime>
+        <circulatingsupply xml:lang="en">102 290 200 ETC</circulatingsupply>
+        <founded xml:lang="en">2015</founded>
+        <maxsupply xml:lang="en">TBD</maxsupply>
+        <name xml:lang="en">Ethereum Classic</name>
+        <networkdif xml:lang="en">120,904,664,381,027</networkdif>
+        <networkhashrate xml:lang="en">8.50 Th/s</networkhashrate>
+        <price xml:lang="en">$14,03</price>
+        <projectwhitepaper xml:lang="en">https://coss.io/documents/white-papers/ethereum-classic.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ethereum_Classic_Logo.svg/1200px-Ethereum_Classic_Logo.svg.png</symbol>
+        <tag xml:lang="en">ETC</tag>
+        <website xml:lang="en">https://ethereumclassic.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin_creator"/>
+        <hasPremine rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_scrypt"/>
+        <about xml:lang="en">Litecoin is a peer-to-peer cryptocurrency and open source software project released under the MIT/X11 license.
+Creation and transfer of coins is based on an open source cryptographic protocol and is not managed by any central authority.
+The coin was inspired by, and in technical details is nearly identical to Bitcoin (BTC)</about>
+        <blockreward xml:lang="en">25 LTC</blockreward>
+        <blocktime xml:lang="en">2m 35s</blocktime>
+        <circulatingsupply xml:lang="en">56 978 521 LTC</circulatingsupply>
+        <founded xml:lang="en">2011</founded>
+        <maxsupply xml:lang="en">84 000 000 LTC</maxsupply>
+        <name xml:lang="en">Litecoin</name>
+        <networkdif xml:lang="en">11,004,139</networkdif>
+        <networkhashrate xml:lang="en">304.92 Th/s</networkhashrate>
+        <premineammount xml:lang="en">150 LTC</premineammount>
+        <price xml:lang="en">$99,69</price>
+        <symbol xml:lang="en">https://media.coindesk.com/uploads/2014/02/Litecoin-logo-e1517247177826.png</symbol>
+        <tag xml:lang="en">LTC</tag>
+        <website xml:lang="en">https://litecoin.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#litecoin_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Charlie Lee</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki_creator"/>
+        <hasPremine rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cnheavy"/>
+        <about xml:lang="en">Loki combines a private transaction network based on Monero with economically incentivised service nodes to create a trustless quorum based networking protocol. This protocol allows anyone to route small packets of data in an anonymous and decentralised way. The front end applications that use this packet routing system are private-by-design, and are known as Service Node Apps “SNApps”; the first of which is the Loki Messenger - a decentralised, anonymous and private messaging service.</about>
+        <blockreward xml:lang="en">113 LOKI</blockreward>
+        <blocktime xml:lang="en">1m 59s</blocktime>
+        <circulatingsupply xml:lang="en">18 679 078 LOKI</circulatingsupply>
+        <founded xml:lang="en">2018</founded>
+        <maxsupply xml:lang="en">150 000 000 LOKI</maxsupply>
+        <name xml:lang="en">Loki</name>
+        <networkdif xml:lang="en">3,333,664,678</networkdif>
+        <networkhashrate xml:lang="en">28.01 Mh/s</networkhashrate>
+        <premineammount xml:lang="en">22 500 000 LOKI</premineammount>
+        <price xml:lang="en">$0,398802</price>
+        <projectwhitepaper xml:lang="en">https://loki.network/wp-content/uploads/2018/01/LokiWhitepaperV1-2.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://i0.wp.com/coinguides.org/wp-content/uploads/2018/05/loki-logo.png?resize=471%2C198&amp;ssl=1</symbol>
+        <tag xml:lang="en">LOKI</tag>
+        <website xml:lang="en">https://loki.network/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#loki_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Project Lead of Loki, a Monero based project with incentivised full nodes an anonymous off-chain communications layer. Leads a team to carry out its technical and community development.</about>
+        <name xml:lang="en">Simon Harman</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple"/>
+        <isPOS rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple"/>
+        <about xml:lang="en">Ripple doesn’t have a blocktime as it isn’t a blockchain. It’s a decentralized ledger that uses a completely different protocol to manage consensus. There are not ‘blocks’, so there is not blockchain. Transactions are effectively sent instantly on Ripple.</about>
+        <circulatingsupply xml:lang="en">39 244 312 603 XRP</circulatingsupply>
+        <founded xml:lang="en">2012</founded>
+        <maxsupply xml:lang="en">100 000 000 000 XRP</maxsupply>
+        <name xml:lang="en">Ripple</name>
+        <price xml:lang="en">$0,534147</price>
+        <projectwhitepaper xml:lang="en">https://ripple.com/files/ripple_consensus_whitepaper.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://i1.wp.com/cryptodesigns.io/wp-content/uploads/2018/01/XRP-Ripple.png?fit=2000%2C2000&amp;ssl=1</symbol>
+        <tag xml:lang="en">XRP</tag>
+        <website xml:lang="en">https://ripple.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ripple_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Ryan Fugger conceived Ripple in 2004 after working on a local exchange trading system in Vancouver. The intent was to create a monetary system that was decentralized and could effectively empower individuals and communities to create their own money. Fugger later built the first iteration of this system, RipplePay.com. Concurrently, in May 2011, Jed McCaleb began developing a digital currency system in which transactions were verified by consensus among members of the network, rather than by the mining process used by Bitcoin.</about>
+        <name>Ryan Fugger</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_x16r"/>
+        <blockreward xml:lang="en">5 000 RVN</blockreward>
+        <blocktime xml:lang="en">1m 2s</blocktime>
+        <circulatingsupply xml:lang="en">1 229 800 206 RVN</circulatingsupply>
+        <founded xml:lang="en">2018</founded>
+        <maxsupply xml:lang="en">21 000 000 000 RVN</maxsupply>
+        <name xml:lang="en">Ravencoin</name>
+        <networkdif xml:lang="en">18 763</networkdif>
+        <networkhashrate xml:lang="en">1.30 Th/s</networkhashrate>
+        <price xml:lang="en">$0,023389</price>
+        <projectwhitepaper xml:lang="en">https://www.ravencoin.org/Ravencoin.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://cdn-images-1.medium.com/max/1600/1*1NQQJQXoBURoy09x-9_1-w.png</symbol>
+        <tag xml:lang="en">RVN</tag>
+        <website xml:lang="en">https://ravencoin.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#rvn_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Bruce Fenton, Tron Black</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ICO"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron_creator"/>
+        <hasICO rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron"/>
+        <isPOS rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_sha256"/>
+        <about xml:lang="en">TRON is a blockchain-based, open-source protocol for the global digital entertainment industry. TRON supports various kinds of blockchain networks and smart contract systems, including bitcoin, Ethereum, EOS, Qtum, and other public blockchain smart contracts, provides developers with multiprotocol infrastructure for entertainment app development, and allows users to enjoy smooth multiprotocol smart networks.</about>
+        <circulatingsupply xml:lang="en">65 748 111 645 TRX</circulatingsupply>
+        <founded xml:lang="en">2015</founded>
+        <icoammount xml:lang="en">100 000 000 TRX</icoammount>
+        <maxsupply xml:lang="en">100 000 000 000 TRX</maxsupply>
+        <name xml:lang="en">TRON</name>
+        <price xml:lang="en">$0,045381</price>
+        <projectwhitepaper xml:lang="en">https://o836fhe91.qnssl.com/tron/whitebook/TronWhitepaper_en.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://raw.githubusercontent.com/ybhgenius/wiki/master/docs/img/logo%E7%BA%A2%E9%BB%91%E8%89%B2%E8%8B%B1%E6%96%87%E7%AB%96%E7%89%88.png</symbol>
+        <tag xml:lang="en">TRX</tag>
+        <website xml:lang="en">https://tron.network</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#tron_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Yu-Chen Sun</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Fork"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <forkedFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#eth"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq_creator"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_ethash"/>
+        <about xml:lang="en">Ubiq is a hard fork of Ethereum that’s completely separate from the Ethereum ecosystem. It runs a slightly modified version of the Ethereum blockchain and implements the Ethereum Virtual Machine for smart contracts and dApps.</about>
+        <blockreward xml:lang="en">7 UBQ</blockreward>
+        <blocktime xml:lang="en">1m 27s</blocktime>
+        <circulatingsupply xml:lang="en">41 235 889 UBQ</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <maxsupply xml:lang="en">TDB</maxsupply>
+        <name xml:lang="en">Ubiq</name>
+        <networkdif xml:lang="en">17,922,258,521,771</networkdif>
+        <networkhashrate xml:lang="en">206.00 Gh/s</networkhashrate>
+        <price xml:lang="en">$0,986939</price>
+        <symbol xml:lang="en">https://upload.wikimedia.org/wikipedia/en/2/26/Ubiq_logo.svg</symbol>
+        <tag xml:lang="en">UBQ</tag>
+        <website xml:lang="en">https://ubiqsmart.com/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ubiq_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">Unknown</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#None"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr_creator"/>
+        <hasNone rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_cn"/>
+        <about xml:lang="en">Monero is cash for a connected world. It’s fast, private, and secure. With Monero, you are your own bank. You can spend safely, knowing that others cannot see your balances or track your activity.</about>
+        <blockreward xml:lang="en">4.42</blockreward>
+        <blocktime xml:lang="en">1m 54s</blocktime>
+        <circulatingsupply xml:lang="en">16 130 929 XMR</circulatingsupply>
+        <founded xml:lang="en">2014</founded>
+        <maxsupply xml:lang="en">TBD</maxsupply>
+        <name xml:lang="en">Monero</name>
+        <networkdif xml:lang="en">47,027,005,914</networkdif>
+        <networkhashrate xml:lang="en">412.52 Mh/s</networkhashrate>
+        <price xml:lang="en">$131,31</price>
+        <projectwhitepaper xml:lang="en">https://github.com/monero-project/research-lab/tree/master/whitepaper</projectwhitepaper>
+        <symbol xml:lang="en">http://www.freelogovectors.net/wp-content/uploads/2018/02/monero_logo.png</symbol>
+        <tag xml:lang="en">XMR</tag>
+        <website xml:lang="en">https://getmonero.org/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#xmr_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <name xml:lang="en">thankful_for_today</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Cryptocurrency"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#DistributionScheme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#POW"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Premine"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#ProtectionScheme"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash_creator"/>
+        <hasPremine rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash"/>
+        <isPOW rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash"/>
+        <usingAlgorithm rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#alg_equihash"/>
+        <about xml:lang="en">Zcash is a cryptocurrency aimed at using cryptography to provide enhanced privacy for its users compared to other cryptocurrencies such as Bitcoin. The Zerocoin protocol was improved and transformed into the Zerocash system, which was then developed into the Zcash cryptocurrency in 2016.</about>
+        <blockreward xml:lang="en">10 ZEC</blockreward>
+        <blocktime xml:lang="en">2m 30s</blocktime>
+        <circulatingsupply xml:lang="en">4 137 694 ZEC</circulatingsupply>
+        <founded xml:lang="en">2016</founded>
+        <maxsupply xml:lang="en">TBD</maxsupply>
+        <name xml:lang="en">Zcash</name>
+        <networkdif xml:lang="en">9,921,748</networkdif>
+        <networkhashrate xml:lang="en">541.86 Mh/s</networkhashrate>
+        <premineammount xml:lang="en">10% of all mined coins will go to initil stakeholders and investors.</premineammount>
+        <price xml:lang="en">$199,53</price>
+        <projectwhitepaper xml:lang="en">http://zerocash-project.org/media/pdf/zerocash-extended-20140518.pdf</projectwhitepaper>
+        <symbol xml:lang="en">https://i0.wp.com/whitepaperdatabase.com/wp-content/uploads/2018/03/Zcash-ZEC-Whitepaper.png?fit=580%2C348&amp;ssl=1</symbol>
+        <tag xml:lang="en">ZEC</tag>
+        <website xml:lang="en">https://z.cash/</website>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash_creator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#zcash_creator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/oacc#Creator"/>
+        <about xml:lang="en">Zooko Wilcox-O&apos;Hearn (born Bryce Wilcox May 13, 1974 in Phoenix, Arizona), is an American Colorado-based computer security specialist.</about>
+        <name xml:lang="en">Zooko Wilcox-O&apos;Hearn</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

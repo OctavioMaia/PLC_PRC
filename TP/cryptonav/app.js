@@ -3,7 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var map = require('./routes/map')
+var nav = require('./routes/navigator')
+var posvspow = require('./routes/posvspow')
 
 var app = express();
 
@@ -18,8 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', map);
-app.use('/map', map);
+app.use('/', index);
+app.use('/posvspow', posvspow);
+app.use('/nav', nav);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
