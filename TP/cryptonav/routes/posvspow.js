@@ -38,13 +38,13 @@ router.get('/', function(req, res, next) {
                         var url = "/nav/coin/" + did
 
                         dot += 'd' + i + '[fontname = Helvetica,shape = doublecircle,style = filled,color = paleturquoise,label="' + did + '",href="' + url + '"];\n'
-                        dot += 'POW -> d' + i + ' [arrowhead=vee,color=white];\n'
+                        dot += 'POW -> d' + i + ' [penwidth=3,arrowhead=vee,color=white];\n'
                     }else{
                         var did = coin_name.slice(coin_name.indexOf('#')+1)
                         var url = "/nav/coin/" + did
 
                         dot += 'd' + i + '[fontname = Helvetica,shape = doublecircle,style = filled,color = paleturquoise,label="' + did + '",href="' + url + '"];\n'
-                        dot += 'POS -> d' + i + ' [arrowhead=vee,color=white];\n'
+                        dot += 'POS -> d' + i + ' [penwidth=3,arrowhead=vee,color=white];\n'
                     }
                 }
                     dot += "}"      
