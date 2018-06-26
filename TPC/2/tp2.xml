@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/D:/Documentos/GitHub/PLC_PRC/TPC/pr.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::A71369::TPC2</id>
+        <title>Criação de RDF</title>
+        <subtitle>Criação de RDF através de parsing XML</subtitle>
+        <bdate>Março 2018</bdate>
+        <edate>Março 2018</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>Octávio José Azevedo Maia</name>
+            <nr>A71369</nr>
+            <email>octaviojmaia@gmail.com</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Foi proposta a criação de um conversor XSL. Este conversor tem como função a conversão de XML para formato RDF.</p>
+        <p>Primeiramente foram criadas as classes, seguido das propriedades e dos individuos.</p>
+        <p>Como aplicado na aula prática, usei o <b>generate-id</b> de modo a gerar um id aleatorio para cada UC.</p>
+    </abstract>
+    <deliverables>
+        <deliverable url="teaching.xml">Teaching (XML)</deliverable>
+        <deliverable url="rdf.xsl">RDF parser (XSL)</deliverable>
+        <deliverable url="ucs.rdf">RDF gerado (RDF)</deliverable>
+        <deliverable url="tp2.xml">Project Record (XML)</deliverable>
+        <deliverable url="tp2.html">Project Record (HTML)</deliverable>
+    </deliverables>
+</pr>

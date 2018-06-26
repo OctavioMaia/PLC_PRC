@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/D:/Documentos/GitHub/PLC_PRC/TPC/pr.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::A71369::TPC5</id>
+        <title>Resolução Ficha1</title>
+        <subtitle>Queries em SPARQL sobre MusicBrainz</subtitle>
+        <bdate>Maio 2018</bdate>
+        <edate>Junho 2018</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>Octávio José Azevedo Maia</name>
+            <nr>A71369</nr>
+            <email>octaviojmaia@gmail.com</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Foi proposta a resolução de queries do exercicio 3 da Ficha1.</p>
+        <p><b>Exercicio 1 (Obtem uma lista de todos os artistas com o seu nome, a sua descrição e a sua homepage) :</b></p>
+        <code>
+            select ?artist ?desc ?url where { 
+                ?s rdf:type mo:MusicArtist.
+                ?s foaf:name ?artist.
+                optional{?s dc:description ?desc.}
+                optional{?s foaf:homepage ?url.}
+            }
+        </code>        
+        <p>Neste exercicio existem artistas cuja homepage e descrição não estão povoadas, daí considerar opcionais.</p>
+        
+        <p><b>Exercicio 2 (Ordena a lista por ordem alfabética de nome) :</b></p>
+        <code>
+            select ?name where { 
+                ?s rdf:type mo:MusicArtist.
+                ?s foaf:name ?name.
+            }
+            order by ?nome
+        </code>
+        
+        <p><b>Exercicio 3 (Obtem uma lista dos nomes dos albuns do artista: "Repórter Estrábico") :</b></p>
+        <code>
+            select ?album where { 
+                ?s rdf:type mo:MusicArtist.
+                ?s foaf:name "Repórter Estrábico".
+                ?x foaf:maker ?s.
+                ?x rdf:type mo:Record.
+                ?x dc:title ?album.
+            }
+        </code>
+        
+        <p><b>Exercicio 4 (Quais os títulos dos albuns de autoria de "Bob Dylan") :</b></p>
+        <code>
+            select ?album where { 
+                ?s rdf:type mo:MusicArtist.
+                ?s foaf:name "Bob Dylan".
+                ?x foaf:maker ?s.
+                ?x rdf:type mo:Record.
+                ?x dc:title ?album.
+            }
+        </code>
+        
+        <p><b>Exercicio 5 (Com que artistas colaborou "Bob Dylan" nos seus albuns?) :</b></p>
+        <code>
+            select ?colab where { 
+                ?s rdf:type mo:MusicArtist.
+                ?s foaf:name "Bob Dylan".
+                ?x rel:collaboratesWith ?s.
+                ?x foaf:name ?colab
+            }
+        </code>
+    </abstract>
+    <deliverables>
+        <deliverable url="tp5.xml">Project Record (XML)</deliverable>
+        <deliverable url="tp5.html">Project Record (HTML)</deliverable>
+    </deliverables>
+</pr>

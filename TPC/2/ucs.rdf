@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://www.di.uminho.pt/jcr/XML/rdf/exercicio#"
+         xml:base="http://www.di.uminho.pt/jcr/XML/rdf/exercicio#">
+   <rdf:Description rdf:ID="UC">
+      <rdf:type rdf:resource="rdfs:Class"/>
+   </rdf:Description>
+   <rdf:Description rdf:ID="Graduation">
+      <rdf:type rdf:resource="rdfs:Class"/>
+   </rdf:Description>
+   <rdf:Property rdf:ID="name">
+      <rdfs:domain rdf:resource="ex:UC"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="year">
+      <rdfs:domain rdf:resource="ex:UC"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="url">
+      <rdfs:domain rdf:resource="ex:UC"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="numberStudents">
+      <rdfs:domain rdf:resource="ex:UC"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="course">
+      <rdfs:domain rdf:resource="ex:UC"/>
+      <rdfs:range rdf:resource="ex:Graduation"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="hasProject">
+      <rdfs:domain rdf:resource="ex:UC"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="year">
+      <rdfs:domain rdf:resource="ex:UC"/>
+   </rdf:Property>
+   <rdf:Property rdf:ID="gradName">
+      <rdfs:domain rdf:resource="ex:Graduation"/>
+   </rdf:Property>
+   <ex:Graduation rdf:ID="MIEI">
+      <ex:gradName>Mestrado Integrado em Engenharia Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MIEBIOM">
+      <ex:gradName>Mestrado Integrado em Engenharia Biomédica</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MIETI">
+      <ex:gradName>Mestrado Integrado em Engenharia de Telecomunicações e Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MIECOM">
+      <ex:gradName>Mestrado Integrado em Engenharia de Comunicações</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LM">
+      <ex:gradName>Licenciatura em Música</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LEI">
+      <ex:gradName>Licenciatura em Engenharia Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MEI">
+      <ex:gradName>Mestrado em Engenharia Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MEINF">
+      <ex:gradName>Mestrado em Ensino da Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="PGIMI">
+      <ex:gradName>Pós-graduação em Gestão da Informação e Marketing Intelligence</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LCC">
+      <ex:gradName>Licenciatura em Ciências da Computação</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LESI">
+      <ex:gradName>Licenciatura em Engenharia de Sistemas e Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LMCC">
+      <ex:gradName>Licenciatura em Matemática e Ciências da Computação</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="MICEI">
+      <ex:gradName>Mestrado em Informática / Curso de Especialização em Informática</ex:gradName>
+   </ex:Graduation>
+   <ex:Graduation rdf:ID="LEA">
+      <ex:gradName>Línguas Estranjeiras Aplicadas</ex:gradName>
+   </ex:Graduation>
+   <ex:UC rdf:ID="d1e3">
+      <ex:name>Introdução à Programação para Não Informáticos (IPNI)</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS</ex:url>
+      <ex:numberStudents>22</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e30">
+      <ex:name>Processamento de Linguagens (PL)</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS</ex:url>
+      <ex:numberStudents>150</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e57">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação de
+            Conhecimento (PRC)</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS</ex:url>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e84">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação da Informação (PRI)</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pri2015</ex:url>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e111">
+      <ex:name>Publicação Eletrónica</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://www4.di.uminho.pt/~jcr/AULAS/elpub2015/</ex:url>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="MIEBIOM"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e139">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2017/2018</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>15</ex:numberStudents>
+      <ex:course rdf:resource="MIETI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e166">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>8</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e193">
+      <ex:name>Laboratório de Engenharia Informática</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:numberStudents>8</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+      <ex:hasProject/>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e231">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação de Conhecimento (PRC)</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/prc2015</ex:url>
+      <ex:numberStudents>26</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e258">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação da Informação (PRI)</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pri2015</ex:url>
+      <ex:numberStudents>34</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e285">
+      <ex:name>Publicação Eletrónica</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:url>http://www4.di.uminho.pt/~jcr/AULAS/elpub2015/</ex:url>
+      <ex:numberStudents>20</ex:numberStudents>
+      <ex:course rdf:resource="MIEBIOM"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e313">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:numberStudents>320</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e337">
+      <ex:name>Processamento de Linguagens</ex:name>
+      <ex:year>2015/2016</ex:year>
+      <ex:numberStudents>151</ex:numberStudents>
+      <ex:course rdf:resource="MIEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e361">
+      <ex:name>Informática para a Musicologia</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:numberStudents>4</ex:numberStudents>
+      <ex:course rdf:resource="LM"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e385">
+      <ex:name>Processamento de Linguagens</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pl-lei-2015</ex:url>
+      <ex:numberStudents>131</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e412">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação de Conhecimento (PRC)</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/prc2015</ex:url>
+      <ex:numberStudents>20</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e439">
+      <ex:name>Projeto Integrado</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:numberStudents>6</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+      <ex:hasProject/>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e472">
+      <ex:name>Processamento de Linguagens e Conhecimento (PLC)::Processamento e Representação da Informação (PRI)</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pri2014</ex:url>
+      <ex:numberStudents>20</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e499">
+      <ex:name>Publicação Eletrónica</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:numberStudents>15</ex:numberStudents>
+      <ex:course rdf:resource="MIEBIOM"/>
+      <ex:year>4</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e523">
+      <ex:name>Algoritmos e Paradigmas de Computação</ex:name>
+      <ex:year>2014/2015</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ensprog2013</ex:url>
+      <ex:numberStudents>2</ex:numberStudents>
+      <ex:course rdf:resource="MEINF"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e550">
+      <ex:name>Engenharia de Linguagens (PED)</ex:name>
+      <ex:year>2013/2014</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/engweb2013</ex:url>
+      <ex:numberStudents>22</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e577">
+      <ex:name>Processamento de Linguagens</ex:name>
+      <ex:year>2013/2014</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>120</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e604">
+      <ex:name>Algoritmos e Paradigmas de Computação</ex:name>
+      <ex:year>2013/2014</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ensprog2013</ex:url>
+      <ex:numberStudents>6</ex:numberStudents>
+      <ex:course rdf:resource="MEINF"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e632">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2013/2014</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e659">
+      <ex:name>UCE30::Engenharia de Linguagens::Processamento e Representação de Conhecimento</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>13</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e686">
+      <ex:name>Processamento de Linguagens</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://elearning.uminho.pt</ex:url>
+      <ex:numberStudents>125</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e713">
+      <ex:name>Algoritmos e Paradigmas de Computação</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ensprog2013</ex:url>
+      <ex:numberStudents>26</ex:numberStudents>
+      <ex:course rdf:resource="MEINF"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e740">
+      <ex:name>Ensino da Programação</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ensprog2013</ex:url>
+      <ex:numberStudents>26</ex:numberStudents>
+      <ex:course rdf:resource="MEINF"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e767">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/engweb2012</ex:url>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e795">
+      <ex:name>UCE30::Engenharia de Linguagens::Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2012</ex:url>
+      <ex:numberStudents>17</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e822">
+      <ex:name>Representação de Conhecimento</ex:name>
+      <ex:year>2012/2013</ex:year>
+      <ex:numberStudents>12</ex:numberStudents>
+      <ex:course rdf:resource="PGIMI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e846">
+      <ex:name>Representação de Conhecimento</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:numberStudents>12</ex:numberStudents>
+      <ex:course rdf:resource="PGIMI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e870">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/engweb2011</ex:url>
+      <ex:numberStudents>25</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e897">
+      <ex:name>UCE30::Engenharia de Linguagens::Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2011</ex:url>
+      <ex:numberStudents>6</ex:numberStudents>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e924">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi-lei-2012</ex:url>
+      <ex:numberStudents>308</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e952">
+      <ex:name>Ensino da Programação</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ensprog2012</ex:url>
+      <ex:numberStudents>26</ex:numberStudents>
+      <ex:course rdf:resource="MEINF"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e979">
+      <ex:name>Verão no Campus: "Scratch"</ex:name>
+      <ex:year>2011/2012</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/vc2012</ex:url>
+      <ex:numberStudents>12</ex:numberStudents>
+      <ex:course rdf:resource=""/>
+      <ex:year/>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e994">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>20010/2011</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/EngWeb2009</ex:url>
+      <ex:numberStudents>25</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1021">
+      <ex:name>Laboratórios de Comunicações III</ex:name>
+      <ex:year>20010/2011</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/lciii2009:2010</ex:url>
+      <ex:numberStudents>34</ex:numberStudents>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1048">
+      <ex:name>Representação de Conhecimento</ex:name>
+      <ex:year>2010/2011</ex:year>
+      <ex:numberStudents>18</ex:numberStudents>
+      <ex:course rdf:resource="PGIMI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1072">
+      <ex:name>Processamento de Linguagens</ex:name>
+      <ex:year>2010/2011</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pl-lei-2011</ex:url>
+      <ex:numberStudents>120</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1100">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2010/2011</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi-lei-2011</ex:url>
+      <ex:numberStudents>344</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1127">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2009/2010</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi-lei-2010</ex:url>
+      <ex:numberStudents>340</ex:numberStudents>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1154">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2009/2010</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi-lcc-2010</ex:url>
+      <ex:numberStudents>140</ex:numberStudents>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1181">
+      <ex:name>Representação de Conhecimento</ex:name>
+      <ex:year>2009/2010</ex:year>
+      <ex:numberStudents>15</ex:numberStudents>
+      <ex:course rdf:resource="PGIMI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1205">
+      <ex:name>Engenharia Web</ex:name>
+      <ex:year>2009/2010</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/EngWeb2009</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1229">
+      <ex:name>Laboratórios de Comunicações III</ex:name>
+      <ex:year>2009/2010</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/lciii2009:2010</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1254">
+      <ex:name>UCE30::Engenharia de Linguagens::Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2008/2009</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2008</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1278">
+      <ex:name>Laboratórios de Comunicações III</ex:name>
+      <ex:year>2008/2009</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/lciii2008</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1302">
+      <ex:name>Representação de Conhecimento</ex:name>
+      <ex:year>2008/2009</ex:year>
+      <ex:numberStudents>15</ex:numberStudents>
+      <ex:course rdf:resource="PGIMI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1326">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2008/2009</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi2009</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1350">
+      <ex:name>Processamento de Linguagens e Compiladores</ex:name>
+      <ex:year>2008/2009</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pl-lei-2011</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LEI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1374">
+      <ex:name>Processamento de Linguagens e Compiladores</ex:name>
+      <ex:year>2007/2008</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/plc2008</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1399">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2007/2008</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pi2008</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1423">
+      <ex:name>Programação Funcional</ex:name>
+      <ex:year>2007/2008</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1444">
+      <ex:name>Laboratórios de Comunicações III</ex:name>
+      <ex:year>2007/2008</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MIECOM"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1465">
+      <ex:name>UCE30::Engenharia de Linguagens::Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2007/2008</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2007</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1489">
+      <ex:name>No courses, 100% research.</ex:name>
+      <ex:year>2006/2007</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource=""/>
+      <ex:year/>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1498">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2005</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1523">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2005</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1547">
+      <ex:name>Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/MICEI2005</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MICEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1571">
+      <ex:name>Programação Funcional</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1592">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1613">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2005/2006</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1634">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1656">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1677">
+      <ex:name>Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MICEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1698">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1719">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1740">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1761">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2004/2005</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1783">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2003/</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1807">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/PED2003/</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1831">
+      <ex:name>Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/MICEI2003/</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MICEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1855">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1876">
+      <ex:name>Programação Imperativa</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1897">
+      <ex:name>Linguagens de Anotação de Documentos</ex:name>
+      <ex:year>2003/2004</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LEA"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1919">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2002/2003</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2002/ped2002.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1943">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2002/2003</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2002/ped2002.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1967">
+      <ex:name>Processamento Estruturado de Documentos</ex:name>
+      <ex:year>2002/2003</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/micei2002/index.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="MICEI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e1991">
+      <ex:name>Linguagens de Anotação de Documentos</ex:name>
+      <ex:year>2002/2003</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/XML/CURSOS/LAD2003/LAD2003.htm</ex:url>
+      <ex:numberStudents>14</ex:numberStudents>
+      <ex:course rdf:resource="LEA"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2018">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2001/2002</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2001/ped2001.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2042">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2001/2002</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2001/ped2001.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2067">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2001/2002</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pli2002/pli2002.html</ex:url>
+      <ex:numberStudents>30</ex:numberStudents>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2094">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2001/2002</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pli2002/pli2002.html</ex:url>
+      <ex:numberStudents>45</ex:numberStudents>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2121">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2000/ped.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2145">
+      <ex:name>Processamento Estruturado de Documentos (Opção IV)</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/ped2000/ped.html</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>5</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2169">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pli2001</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>2</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2193">
+      <ex:name>Processamento de Linguagens I</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:url>http://www.di.uminho.pt/~jcr/AULAS/pli2001</ex:url>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>3</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2218">
+      <ex:name>Paradigmas de Programação I</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LESI"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+   <ex:UC rdf:ID="d1e2239">
+      <ex:name>Paradigmas de Programação I</ex:name>
+      <ex:year>2000/2001</ex:year>
+      <ex:numberStudents/>
+      <ex:course rdf:resource="LMCC"/>
+      <ex:year>1</ex:year>
+   </ex:UC>
+</rdf:RDF>

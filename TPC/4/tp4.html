@@ -1,0 +1,110 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <title>Project Record</title>
+   </head>
+   <body>
+      <div class="container">
+         <h1 align="center">Project Record</h1>
+         
+         <hr>
+         <h2 align="left">Metadata</h2>
+         <table width="100%">
+            <tr>
+               <td><b>ID: </b>PRC2018::A71369::TPC4
+               </td>
+               <td><b>BEGIN DATE: </b>Abril 2018
+               </td>
+            </tr>
+            <tr>
+               <td><b>TITLE: </b>Resolução Ficha17
+               </td>
+               <td><b>END DATE: </b>Abril 2018
+               </td>
+            </tr>
+            <tr>
+               <td><b>SUBTITLE: </b>Queries em SPARQL
+               </td>
+               <td><b>SUPERVISOR: </b><a href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</a></td>
+            </tr>
+         </table>
+         
+         <hr>
+         <h2 align="left">Workteam</h2>
+         <ul>
+            
+            <ul>
+               <li><b>Name: </b>Octávio José Azevedo Maia<br><b>Number: </b>A71369<br><b>Email: </b><a href="mailto:octaviojmaia@gmail.com">octaviojmaia@gmail.com</a><br></li>
+            </ul>
+            
+         </ul>
+         
+         <hr>
+         <h2 align="left">Abstract</h2>
+         <ul>
+            
+            <p>Foi proposta a resolução de queries sobre a tabela periódica.</p>
+            
+            <p><b>Exercicio 5 (3 elementos com maior número atómico) :</b></p>
+            <pre><code>
+            select distinct ?name ?number where {
+                ?s a tp:Element .
+                ?s tp:name ?name .
+                ?s tp:atomicNumber ?number .
+            } 
+            order by desc(?atomic_number)
+            limit 3
+        </code></pre>
+            
+            <p><b>Exercicio 6 (nome e numero de cada grupo) :</b></p>
+            <pre><code>
+            select distinct ?name ?number where {
+                ?s a tp:Group .
+                optional {?s tp:name ?name .}
+                optional {?s tp:number ?number. }
+            } 
+        </code></pre>
+            
+            <p><b>Exercicio 7 (Informações do grupo 18) :</b></p>
+            <pre><code>
+            select ?name ?number ?symb where {
+                ?s a tp:Element .
+                ?s tp:name ?name .
+                ?s tp:symbol ?symb .
+                ?s tp:atomicNumber ?number.
+                ?g a tp:Group .
+                ?g tp:number "18"^^xsd:integer.
+                ?s tp:group ?g
+            } 
+        </code></pre>
+            
+            <p><b>Exercicio 8 (Numero de elementos em cada grupo) :</b></p>
+            <pre><code>
+            select ?grupo (count (?elem) as ?total) where {
+                ?group a tp:Group.
+                ?group tp:element ?elem
+            }
+            group by ?group
+            order by desc(?total)
+        </code></pre>
+            </ul>
+         
+         <hr>
+         <h2 align="left">Deliverables</h2>
+         <ul>
+            
+            <ul>
+               <li><a href="tp4.xml">Project Record (XML)</a></li>
+            </ul>
+            
+            <ul>
+               <li><a href="tp4.html">Project Record (HTML)</a></li>
+            </ul>
+            
+         </ul>
+         
+      </div>
+   </body>
+</html>

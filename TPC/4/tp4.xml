@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/D:/Documentos/GitHub/PLC_PRC/TPC/pr.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::A71369::TPC4</id>
+        <title>Resolução Ficha17</title>
+        <subtitle>Queries em SPARQL</subtitle>
+        <bdate>Abril 2018</bdate>
+        <edate>Abril 2018</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>Octávio José Azevedo Maia</name>
+            <nr>A71369</nr>
+            <email>octaviojmaia@gmail.com</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Foi proposta a resolução de queries sobre a tabela periódica.</p>
+        <p><b>Exercicio 5 (3 elementos com maior número atómico) :</b></p>
+        <code>
+            select distinct ?name ?number where {
+                ?s a tp:Element .
+                ?s tp:name ?name .
+                ?s tp:atomicNumber ?number .
+            } 
+            order by desc(?atomic_number)
+            limit 3
+        </code>
+        
+        <p><b>Exercicio 6 (nome e numero de cada grupo) :</b></p>
+        <code>
+            select distinct ?name ?number where {
+                ?s a tp:Group .
+                optional {?s tp:name ?name .}
+                optional {?s tp:number ?number. }
+            } 
+        </code>
+        
+        <p><b>Exercicio 7 (Informações do grupo 18) :</b></p>
+        <code>
+            select ?name ?number ?symb where {
+                ?s a tp:Element .
+                ?s tp:name ?name .
+                ?s tp:symbol ?symb .
+                ?s tp:atomicNumber ?number.
+                ?g a tp:Group .
+                ?g tp:number "18"^^xsd:integer.
+                ?s tp:group ?g
+            } 
+        </code>
+        
+        <p><b>Exercicio 8 (Numero de elementos em cada grupo) :</b></p>
+        <code>
+            select ?grupo (count (?elem) as ?total) where {
+                ?group a tp:Group.
+                ?group tp:element ?elem
+            }
+            group by ?group
+            order by desc(?total)
+        </code>
+    </abstract>
+    <deliverables>
+        <deliverable url="tp4.xml">Project Record (XML)</deliverable>
+        <deliverable url="tp4.html">Project Record (HTML)</deliverable>
+    </deliverables>
+</pr>

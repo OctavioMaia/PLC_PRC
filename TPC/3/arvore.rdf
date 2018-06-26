@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#"
+     xml:base="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:arvoregeneologica="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica">
+        <rdfs:comment>Ontologia de uma árvore geneológica</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandparent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandparent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandson">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasParent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasSon"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasSon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasSon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#marriedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#marriedWith">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#marriedWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Daughter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Daughter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasParent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>F</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Father -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Father">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasSon"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>M</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Granddaughter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Granddaughter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandparent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>F</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandfather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandfather">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandson"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>M</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandmother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandmother">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandson"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>F</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Grandson">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasGrandparent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>M</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Mother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Mother">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasSon"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>F</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Son -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Son">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#hasParent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#sex"/>
+                        <owl:hasValue>M</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio">
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio_2"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa"/>
+        <marriedWith rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#silvia"/>
+        <name>António Pedro Santos Maia</name>
+        <sex>M</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio_2">
+        <hasSon rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio"/>
+        <marriedWith rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa"/>
+        <name>António Maia</name>
+        <sex>M</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda">
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio_2"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda_2"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#serafim"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#silvia"/>
+        <name>Arminda Luisa Azevedo Maia</name>
+        <sex>F</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda_2">
+        <name>Arminda Gonçalves Maia</name>
+        <sex>F</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa">
+        <name>Maria Luisa</name>
+        <sex>F</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#octavio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#octavio">
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio_2"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda_2"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#luisa"/>
+        <hasGrandparent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#serafim"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#antonio"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#silvia"/>
+        <name>Octávio José Azevedo Maia</name>
+        <sex>M</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#serafim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#serafim">
+        <name>Serafim da Silva Gonçalves</name>
+        <sex>M</sex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#silvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#silvia">
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#arminda_2"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/octavio/ontologies/2018/5/arvoregeneologica#serafim"/>
+        <name>Silvia Maria Azevedo Gonçalves Maia</name>
+        <sex>F</sex>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

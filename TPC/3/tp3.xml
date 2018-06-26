@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/D:/Documentos/GitHub/PLC_PRC/TPC/pr.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::A71369::TPC3</id>
+        <title>Criação de uma Ontologia</title>
+        <subtitle>Ontologia sobre uma árvore geneológica</subtitle>
+        <bdate>Março 2018</bdate>
+        <edate>Março 2018</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>Octávio José Azevedo Maia</name>
+            <nr>A71369</nr>
+            <email>octaviojmaia@gmail.com</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Foi proposta a criação de uma ontologia para representar a nossa árvore geneológica.</p>
+        <p>Primeiramente foram criadas as classes, sendo <b>Person</b> a superclasse e todas as outras subclasses da mesma:</p>
+        <code>
+            Person
+                Grandmother
+                Grandfather
+                Granddaugher
+                Grandson
+                Daughter
+                Son
+                Mother
+                Father
+        </code>
+        <p>Após criadas as classes foram criadas as relações, bem como associados os respetivos inversos, dominios e contra-dominios:</p>
+        <code>
+            hasParent
+            hasGrandParent
+            hasSon
+            hasGrandson
+            marriedWith
+        </code>
+        <p>Finalmente foram criadas as propriedades de cada individuo:</p>
+        <code>
+            name
+            sex
+        </code>
+    </abstract>
+    <deliverables>
+        <deliverable url="arvore.rdf">Árvore geneologica (RDF)</deliverable>
+        <deliverable url="arvoregeneologica.rdf">Árvore geneologica inferida (RDF)</deliverable>
+        <deliverable url="tp3.xml">Project Record (XML)</deliverable>
+        <deliverable url="tp3.html">Project Record (HTML)</deliverable>
+    </deliverables>
+</pr>

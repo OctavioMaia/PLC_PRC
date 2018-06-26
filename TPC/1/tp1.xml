@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/D:/Documentos/GitHub/PLC_PRC/TPC/pr.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::A71369::TPC1</id>
+        <title>FOAF</title>
+        <subtitle>Criação de ontologia baseada em FOAF</subtitle>
+        <bdate>Março 2018</bdate>
+        <edate>Março 2018</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>Octávio José Azevedo Maia</name>
+            <nr>A71369</nr>
+            <email>octaviojmaia@gmail.com</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Foi proposta a instalação do Protege, Rapper, GraphDB, bem como a criação de um FOAF pessoal.</p>
+        <p>Em anexo envio o FOAF pessoal criado.</p>
+    </abstract>
+    <deliverables>
+        <deliverable url="a71369_foaf.rdf">FOAF (RDF)</deliverable>
+        <deliverable url="tp1.xml">Project Record (XML)</deliverable>
+        <deliverable url="tp1.html">Project Record (HTML)</deliverable>
+    </deliverables>
+</pr>
